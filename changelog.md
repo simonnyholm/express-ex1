@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added express basic
 - Added cheeses routes (/cheeses)
+- Added authorization middleware for cheeses
 
-* Added authorization middleware for cheeses
-
-[1.0.0]: https://github.com/simonnyholm/express-ex1/releases/tags/v1.0.0
+[1.0.0]: https://github.com/simonnyholm/express-ex1/releases/tag/v1.0.0
