@@ -1,16 +1,11 @@
 import express from "express";
-import oste from "./routes/oste.js";
+
+import cheeses from "./routes/cheeses/index.js";
 
 const app = express();
 
 app.use(express.static("./public"));
-
-app.get("/", function (request, response) {
-  response.send("Hej ");
-  response.end();
-});
-
-oste(app);
+cheeses(app);
 
 // app.get("/hej/:navn", function (request, response) {
 //   response.setHeader("content-type", "text/html");
