@@ -1,4 +1,7 @@
-export default function getAllCheeses(request, response) {
+import useDB from "../../database";
+
+export default async function getAllCheeses(request, response) {
+  const { collection, client } = await useDB("cheeses");
   if (request.params.id) {
     //get single cheese
   } else {
