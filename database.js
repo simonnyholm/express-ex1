@@ -8,6 +8,7 @@ const { MongoClient } = mongodb;
 const uri = process.env.MONGO_URI;
 // Create a ew MongoClient
 const client = new MongoClient(uri);
+
 export default async function useDB(collectionName) {
   try {
     // Connect the client to the server (optional starting in v4.7)

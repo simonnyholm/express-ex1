@@ -1,10 +1,11 @@
 import express from "express";
 import cheeses from "./routes/cheeses/index.js";
 
-
 const app = express();
 
 app.use(express.static("./public"));
+app.use(express.json());
+
 cheeses(app);
 
 app.listen(3102, function () {
@@ -12,4 +13,3 @@ app.listen(3102, function () {
 });
 
 // Connecting to the mongodb server
-
