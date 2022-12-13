@@ -18,6 +18,7 @@ export default async function updateCheese(request, response) {
       const oldResult = await collection.findOne({
         _id: ObjectId(request.params.id),
       });
+      console.log(oldResult);
       await unlink(oldResult.image.path);
     }
 

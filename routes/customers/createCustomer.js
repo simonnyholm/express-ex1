@@ -22,14 +22,13 @@ export default async function createCustomer(request, response) {
 
   try {
     const result = await collection.findOneAndUpdate(
-      { createdAt: Date.now },
+      { createdAt: Date.now() },
       { $set: { username: request.body.username, password: hash } },
       { upsert: true, returnDocument: "after" }
     );
     response.status(201);
     response.json(result.value);
     response.end();
-    
   } catch (error) {
     console.log("createconstumer error", error);
     response.status(400);
